@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/employyes_list_app/static/css/main.eaa9daab.css",
+    "main.js": "/employyes_list_app/static/js/main.ed3503e8.js",
+    "static/js/787.4488b3f2.chunk.js": "/employyes_list_app/static/js/787.4488b3f2.chunk.js",
+    "index.html": "/employyes_list_app/index.html",
+    "main.eaa9daab.css.map": "/employyes_list_app/static/css/main.eaa9daab.css.map",
+    "main.ed3503e8.js.map": "/employyes_list_app/static/js/main.ed3503e8.js.map",
+    "787.4488b3f2.chunk.js.map": "/employyes_list_app/static/js/787.4488b3f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaa9daab.css",
+    "static/js/main.ed3503e8.js"
+  ]
+}
