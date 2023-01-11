@@ -7,9 +7,6 @@ const SearchBar = () => {
      );
     
     };
-    // </div> <div style={styledSearchBar}>
-        //<input type="text" placeholder="Search"></input>
-      //</div> 
 const styledSearchBar ={
 cursor: 'pointer',
 width: '95%',

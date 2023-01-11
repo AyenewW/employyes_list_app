@@ -7,7 +7,7 @@ return (
 <div style={styledEmployeePage}>
 <h3><Header title="Employee"  icon={faAngleLeft}/></h3>
 <EmployeeDetail
- Employee={props.Employee}
+ employees={props.employees}
   EmployeeDetail={props.EmployeeDetail}/>
 </div>
 );

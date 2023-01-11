@@ -1,17 +1,15 @@
-const EmployeeListItem = ({image,name,title,onClick}) => {
-    //return Employee.map(({image,name,title,},index)=>{
+const EmployeeListItem = ({image,name,occupation,onClick}) => {
+     
         return(
         <div style={styledEmployeeListItem} onClick={onClick} >
         <img  style={styledImage} src={image} alt={image} />
         <div>
             <h3 style={{margin:"0"}}>{name}</h3>
-            <p style={{margin :'0'}}>{title}</p>
+            <p style={{margin :'0'}}>{occupation}</p>
         </div>
         </div>
       
     )
-    
-  //  });
 };
 
     const styledImage ={

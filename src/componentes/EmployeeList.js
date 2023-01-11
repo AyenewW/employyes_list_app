@@ -2,14 +2,14 @@ import EmployeeListItem from "./EmployeeListItem";
 
 const EmployeeList = (props) => {
 
-return props.Employee.map(({image,name,title},index) => {
+return props.employees.map(({image,name,occupation},index) => {
   return (
     <EmployeeListItem
     key={index}
     image={image}
     name={name}
-    title={title}
-    onClick={()=>props.setEmployeeDetail(props.Employee[index])} />
+    title={occupation}
+    onClick={()=>props.setEmployeeDetail(props.employees[index])} />
   )
 } )
 

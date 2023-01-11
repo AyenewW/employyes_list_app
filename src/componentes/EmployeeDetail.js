@@ -10,13 +10,11 @@ const EmployeeDetail = ({EmployeeDetail}) => {
        />
        
       <div>
-         
           <h4 style={{margin:"0"}}>{EmployeeDetail.name}</h4>
-          <p style={{margin:0}}>{EmployeeDetail.title}</p>
+          <p style={{margin:0}}>{EmployeeDetail.occupation}</p>
            </div>
          </div>
       <div>
-      
   <ul style={styledUI}>
     <li>
       <h3>Call Office</h3>
