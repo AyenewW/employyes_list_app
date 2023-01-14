@@ -4,7 +4,10 @@ max-width: 1200px;
 margin: 0 auto;
 margin-top: 50px;
 padding: 20px;
-background-color: #f4f4f4;
+background-color: #c1ebba;
+font-family: Georgia;
+font-weight:200;
+font-size: large;
 }
 
 *{

@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
     return (
-        <div>
+        <div style={bodystyle}>
             <h1>Welcome To the EmployeePage</h1>
             <p> Types of employees:
                 Full-Time Employees.
@@ -19,11 +19,44 @@ function Home() {
                 a senior/experienced employee
             </p>
             <div>
-                <div>Login</div>
-                <div>Register</div>
+
+                <div>Login
+                    <input
+                        style={styledpassword}
+                        type="password"
+                        placeholder="Enter PassWord"
+                    />
+                </div>
+                <div>Register
+                    <button style={styledregister} type="button">
+                        Submit
+                    </button>
+                </div>
             </div>
         </div>
     );
+
+}
+
+const styledregister = {
+    borderRadius: "10px",
+    backgroundColor: "blue",
+    color: "white",
+    padding: "5px 7px",
+    margin: '10px',
+};
+
+const styledpassword = {
+    //display: 'flex',
+    gap: '5px',
+    margin: '10px',
+    padding: '1px 5px',
+    borderRadius:'5px',
+}
+const bodystyle = {
+    //display: 'flex',
+   margin: '10px',
+    padding: '2px 2px'
 
 }
 export default Home;
