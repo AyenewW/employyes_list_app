@@ -1,6 +1,5 @@
 const Wrapper = (props) => {
     return <div style={styledWrapper}>{props.children}</div>
-     
     };
 const styledWrapper ={
 //border:'2px solid red',

@@ -1,13 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Header =(props)=> {
 return (
-<div style={styledHeader}> 
-<FontAwesomeIcon icon={props.icon} color="#03A9F4" />
-{props.title} 
+<div style={styledHeader}>
+< FontAwesomeIcon icon={props.icon} color='#03A9F4'/>
+{props.title}
 </div>
 )
+
 };
+
 const styledHeader={
 //border: "1px solid #795548",
 textAlign:"center",

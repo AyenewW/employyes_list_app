@@ -1,16 +1,15 @@
-const EmployeeListItem = ({image,name,occupation,onClick}) => {
-     
-        return(
-        <div style={styledEmployeeListItem} onClick={onClick} >
-        <img  style={styledImage} src={image} alt={image} />
+const EmployeeListItem = ({ image, name, occupation, onClick }) => {
+    return (
+      <div style={styledEmployeeListItem} onClick={onClick}>
+        <img style={styledImage} src={image} alt={image} />
         <div>
-            <h3 style={{margin:"0"}}>{name}</h3>
-            <p style={{margin :'0'}}>{occupation}</p>
+          <h3 style={{ margin: "0" }}>{name}</h3>
+          <p style={{ margin: "0" }}>{occupation}</p>
         </div>
-        </div>
-      
-    )
-};
+      </div>
+    );
+  };
+  
 
     const styledImage ={
         width: "60px",
