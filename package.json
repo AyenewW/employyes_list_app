@@ -1,7 +1,7 @@
 {
   "name": "employyes_list_app",
   "version": "0.1.0",
-  "homepage": "https://AyenewW.github.io",
+  "homepage": "https://AyenewW.github.io/employyes_list_app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
