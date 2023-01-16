@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <div style={bodystyle}>
+        <div>
             <h1>Welcome To the EmployeePage</h1>
             <p> Types of employees:
                 Full-Time Employees.
@@ -18,45 +19,17 @@ function Home() {
                 a former/new/prospective employee
                 a senior/experienced employee
             </p>
-            <div>
-
-                <div>Login
-                    <input
-                        style={styledpassword}
-                        type="password"
-                        placeholder="Enter PassWord"
-                    />
-                </div>
-                <div>Register
-                    <button style={styledregister} type="button">
-                        Submit
-                    </button>
-                </div>
+            <div style={styledcontainer}>
+                <div><Link to ='/login'>Login</Link></div>
+                <div><Link to ='/register'>Register</Link></div>
             </div>
         </div>
     );
 
 }
-
-const styledregister = {
-    borderRadius: "10px",
-    backgroundColor: "blue",
-    color: "white",
-    padding: "5px 7px",
-    margin: '10px',
-};
-
-const styledpassword = {
-    //display: 'flex',
-    gap: '5px',
-    margin: '10px',
-    padding: '1px 5px',
-    borderRadius:'5px',
-}
-const bodystyle = {
-    //display: 'flex',
-   margin: '10px',
-    padding: '2px 2px'
-
+const styledcontainer={
+    collor:'red',
+    TextDecoration:'noon',
+    margin:'30px',
 }
 export default Home;
