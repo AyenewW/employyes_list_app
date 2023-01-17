@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div style={styledNavBar}>
-      <h3>Employees</h3>
+      <h3>EMPLOYEES</h3>
       <ul style={styledUl}>
         <li style={{ cursor: 'pointer' }}>
-          <Link to="/">Home</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/">HOME</Link>
         </li>
         <li style={{ cursor: 'pointer' }}>
-          <Link to="/Add-employees">Add Employees</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/Add-employees">ADD_EMPOLYEES</Link>
         </li>
         <li style={{ cursor: 'pointer' }}>
-          <Link to="/Employees-list">Employees List</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/Employees-list">EMPLOYEES_LIST</Link>
         </li>
       </ul>
     </div>

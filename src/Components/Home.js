@@ -20,8 +20,8 @@ function Home() {
                 a senior/experienced employee
             </p>
             <div style={styledcontainer}>
-                <div><Link to ='/login'>Login</Link></div>
-                <div><Link to ='/register'>Register</Link></div>
+                <div><Link style={{textDecoration:"none",color:'white'}} to ='/login'>Login</Link></div>
+                <div><Link style={{textDecoration:"none",color:'white'}} to ='/register'>Register</Link></div>
             </div>
         </div>
     );

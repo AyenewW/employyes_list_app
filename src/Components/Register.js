@@ -28,7 +28,7 @@ function Register (props) {
             <h2>Register</h2>
         <form style={loginform} onSubmit={handleSubmit} >
             <label htmlFor='name'>Full name</label>
-            <input value={name}name='name' id='name'placeholder='full Name' onChange = {handleChange}/>
+            <input value={name} onChange={(e)=>setName(e.target.value)} name='name' id='name'placeholder='full Name' />
             <label htmlfor='email'>Email</label>
             <input value={email}onChange={(e)=>setEmail(e.target.value)} type='email'placeholder='Youremail'name='email'/>
             <label htmlfor='password'>Password</label>
