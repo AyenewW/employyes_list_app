@@ -6,13 +6,13 @@ function NavBar() {
       <h3>EMPLOYEES</h3>
       <ul style={styledUl}>
         <li style={{ cursor: 'pointer' }}>
-          <Link style={{textDecoration:"none",color:'white'}} to="/">HOME</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/employyes_list_app">HOME</Link>
         </li>
         <li style={{ cursor: 'pointer' }}>
-          <Link style={{textDecoration:"none",color:'white'}} to="/Add-employees">ADD_EMPOLYEES</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/Add-employees">ADD-EMPOLYEES</Link>
         </li>
         <li style={{ cursor: 'pointer' }}>
-          <Link style={{textDecoration:"none",color:'white'}} to="/Employees-list">EMPLOYEES_LIST</Link>
+          <Link style={{textDecoration:"none",color:'white'}} to="/Employees-list">EMPLOYEES-LIST</Link>
         </li>
       </ul>
     </div>
@@ -29,13 +29,18 @@ const styledNavBar = {
   backgroundColor: '#00BCD4',
   color: '#fff',
   padding: '0 30px',
+  margin:'10px',
+  fontFamily:'georgia'
 
 }
 const styledUl = {
   display: 'flex',
-  gap: '5px',
+  gap: '15px',
   justifyContent: 'flex-end',
   listStyle: 'none',
+  margin:'10px',
+  padding:'10px',
+  fontFamily:'georgia'
 
 }
 export default NavBar;

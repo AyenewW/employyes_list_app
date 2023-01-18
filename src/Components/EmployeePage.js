@@ -8,7 +8,10 @@ const EmployeePage = ( props) => {
       <Header title="Employee" icon={faAngleLeft} />
       <EmployeeDetail
       employees={props.employees}
-       employeeDetail={props.employeeDetail}/>
+       employeeDetail={props.employeeDetail}
+       isLoading={props.isLoading}
+       isError={props.isError}
+       />
     </div>
   );
 };

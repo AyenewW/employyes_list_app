@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
     return (
-        <div>
+        <div style={{margin:'0 auto'}}>
             <h1>Welcome To the EmployeePage</h1>
             <p> Types of employees:
                 Full-Time Employees.
@@ -19,17 +19,25 @@ function Home() {
                 a former/new/prospective employee
                 a senior/experienced employee
             </p>
-            <div style={styledcontainer}>
-                <div><Link style={{textDecoration:"none",color:'white'}} to ='/login'>Login</Link></div>
-                <div><Link style={{textDecoration:"none",color:'white'}} to ='/register'>Register</Link></div>
+            <div >
+                <div style={styledcontainer} ><Link style={{textDecoration:"none",color:'white'}} to ='/login'>Login</Link></div>
+                <div style={styledcontainer} ><Link style={{textDecoration:"none",color:'white'}} to ='/register'>Register</Link></div>
             </div>
         </div>
     );
 
 }
 const styledcontainer={
-    collor:'red',
-    TextDecoration:'noon',
-    margin:'30px',
+
+    backgroundColor:'#2196F3',
+    width:'100px',
+    //marginBottom:'10px',
+    padding:'3px 0',
+    textAlign:'center',
+    borderRadius:'10px',
+    //marginLeft:'10px',
+    color:'#fff',
+    margin:'10px',
+    cursor:'pointer',
 }
 export default Home;

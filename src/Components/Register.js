@@ -15,7 +15,7 @@ function Register (props) {
       }
       function handleSubmit (event) {
         event.preventDefault();
-        fetch("https://lit-dusk-21328.herokuapp.com/api/employees/addemployees", {
+        fetch("https://lit-dusk-21328.herokuapp.com/api/employees/allemployees", {
           method: JSON.stringify(employeesData),
           headers: {
             "Content-Type": "application/json",
@@ -35,7 +35,7 @@ function Register (props) {
             <input value={pass}onChange={(e)=>setPass(e.target.value)} type='password'placeholder='' id='name'name='password'/>
             <button type='submit' >Log In</button>
             </form>
-            <button className='link-btn' onClick={()=> props.onFormSwitch ('login')}> Already have an Account ? Login here.</button>
+            {/* <button className='link-btn' onClick={()=> props.onFormSwitch ('login')}> Already have an Account ? Login here.</button> */}
             </div>
     )
   };
