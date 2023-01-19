@@ -1,61 +1,54 @@
 import React from 'react'
-import {useState} from "react";
+import { useState } from 'react'
+import { Button } from '@mui/material'
 
-function Register () {
-    const [email,setEmail] =useState('');
-    const [pass,setPass] =useState('');
-    const [name,setName]  = useState();
-    const [employeesData, setEmployeesData] = useState ({
-    })
-      const handleChange = (event) => {
-        const updatedUserData = {
-          ...employeesData, [event.target.name]: event.target.value,
-        };
-        setEmployeesData(updatedUserData);
-      }
-      function handleSubmit (event) {
-        event.preventDefault();
-        fetch("https://lit-dusk-21328.herokuapp.com/api/employees/allemployees", {
-          method: JSON.stringify(employeesData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-      }
-    
-    return (
-        <div style={authformcontainer}>
-            <h2>Register</h2>
-        <form style={loginform} onSubmit={handleSubmit} >
-            <label htmlFor='name'>Full name</label>
-            <input value={name} onChange={(e)=>setName(e.target.value)} name='name' id='name'placeholder='full Name' />
-            <label htmlfor='email'>Email</label>
-            <input value={email}onChange={(e)=>setEmail(e.target.value)} type='email'placeholder='Youremail'name='email'/>
-            <label htmlfor='password'>Password</label>
-            <input value={pass}onChange={(e)=>setPass(e.target.value)} type='password'placeholder='' id='name'name='password'/>
-            <button type='submit' >Log In</button>
-            </form>
-            {/* <button className='link-btn' onClick={()=> props.onFormSwitch ('login')}> Already have an Account ? Login here.</button> */}
-            </div>
-    )
-  };
+export const Register = (props) => {
+  const [fullName, setFullName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-const authformcontainer={
-    textAlign: 'center',
-   display: 'flex',
-    border: " green solid 2px ",
-    borderRadius: "3px",
-     padding: "10px",
-       alignItems: 'center',
-     flexDirection: 'column',
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    localStorage.setItem('fullName', fullName)
+    localStorage.setItem('email', email)
+    localStorage.setItem('password', password)
+  }
+
+  return (
+    <div className="authformcontainer ">
+      <h2>Register</h2>
+      <form className="registerform" onSubmit={handleSubmit}>
+        <label htmlfor="name">Full Name</label>
+        <input
+          onChange={(e) => setFullName(e.target.value)}
+          type="text"
+          placeholder="Please enter your full name"
+          id="fullName"
+          name="fullName"
+        />
+        <label htmlfor="email">Email</label>
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          placeholder="Youremail"
+          id="email"
+          name="email"
+        />
+        <label htmlfor="password">Password</label>
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          type="password"
+          placeholder="Enter Your Password"
+          id="password"
+          name="password"
+        />
+        <Button type="submit" variant="contained" style={{ margin: '2rem' }}>
+          Register
+        </Button>
+      </form>
+      <button className="link-btn" onClick={() => props.toggleForm('Login')}>
+        Already have an account? Login here.
+      </button>
+    </div>
+  )
 }
-
-const loginform={
-    
-        textAlign: 'center',
-        display: 'flex',
-         
-        justifyContent: 'center',
-       flexDirection: 'column',
-    }
-export default Register

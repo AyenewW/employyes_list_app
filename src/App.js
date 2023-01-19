@@ -6,8 +6,9 @@ import Home from './Components/Home'
 import Employees from './Components/Employees'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './Components/NavBar'
-import Register from './Components/Register';
-import Login from './Components/Login';
+// import Register from './Components/Register';
+// import Login from './Components/Login';
+
 function App() {
   // const [currentFORM, SetCurrentForm] = useState('login')
   //      const toggleForm =(formName)=>{
@@ -17,7 +18,7 @@ function App() {
   const [employeeDetail, setEmployeeDetail] = useState({})
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-
+const [isLoggedIn,setIsLoggedIn] =useState(false)
   console.log('isLoading', isLoading)
   useEffect(() => {
     fetch(`https://lit-dusk-21328.herokuapp.com/api/employees/allemployees`)
@@ -32,14 +33,14 @@ function App() {
         setIsError(true)
       })
   }, [])
-
+  // currentFORM === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
   return (
     <BrowserRouter>
-      <NavBar />
+      <NavBar  isLoggedIn={isLoggedIn}/>
       {/* {currentFORM === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>} */}
       <div className="container">
         <Routes>
-          <Route path="/employyes_list_app" element={<Home />} />
+          <Route path="/employyes_list_app" element={<Home setIsLoggedIn ={setIsLoggedIn} />} />
           <Route path="/add-Employees" element={<Form />} />
           <Route
             path="/employees-list"
@@ -54,8 +55,8 @@ function App() {
             }
 
           />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} /> */}
         </Routes>
       </div>
     </BrowserRouter>

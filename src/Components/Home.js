@@ -1,6 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-function Home() {
+import Login from "./Login";
+import {Register} from "./Register";
+ import { useState } from "react";
+
+function Home(props) {
+    const [currentFORM, SetCurrentForm] = useState('login')
+      const toggleForm =(formName)=>{
+    SetCurrentForm(formName);
+      }
     return (
         <div style={{ margin: '0 auto' }}>
             <h1>Welcome To the EmployeePage</h1>
@@ -18,22 +25,29 @@ function Home() {
                 a former/new/prospective employee
                 a senior/experienced employee
             </p>
-            <div >
+            {currentFORM==='Login'?(
+            <Login setIsloggedIn = {props.setIsloggedIn}
+            toggleForm ={toggleForm} /> 
+            ):(
+            <Register toggleForm ={toggleForm}/>
+            )}
+             
+            {/* <div >
                 <div style={styledcontainer} ><Link style={{ textDecoration: "none", color: 'white' }} to='/login'>Login</Link></div>
                 <div style={styledcontainer} ><Link style={{ textDecoration: "none", color: 'white' }} to='/register'>Register</Link></div>
-            </div>
+            </div> */}
         </div>
     );
 
 }
-const styledcontainer = {
-    backgroundColor: '#2196F3',
-    width: '100px',
-    padding: '3px 0',
-    textAlign: 'center',
-    borderRadius: '10px',
-    color: '#fff',
-    margin: '10px',
-    cursor: 'pointer',
-}
+// const styledcontainer = {
+//        backgroundColor: '#2196F3',
+//          width: '100px',
+//     padding: '3px 0',
+//     textAlign: 'center',
+//     borderRadius: '10px',
+//     color: '#fff',
+//     margin: '10px',
+//     cursor: 'pointer',
+// }
 export default Home;

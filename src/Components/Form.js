@@ -18,9 +18,10 @@ const Form = () => {
     };
     setEmployeesData(updatedUserData);
   }
-  function handleSubmit(event) {
-    //event.preventDefault(),
-      fetch("https://lit-dusk-21328.herokuapp.com/api/employees/allemployees", {
+  function handleSubmit (event) {
+    event.preventDefault()
+      fetch("https://lit-dusk-21328.herokuapp.com/api/employees/allemployees",
+       {
         method: "POST",
         body: JSON.stringify(employeesData),
         headers: {
@@ -100,12 +101,11 @@ const styledForm = {
   
 };
 const styledInput = {
-  borderRadius: '5px',
-  fontSize: '1rem',
+ 
   padding: '0.25rem 1rem',
    borderRadius: "9px",
   fontSize: "large",
-   padding: "5px",
+   
    textAlign: "center",
 };
 const styledButton = {
