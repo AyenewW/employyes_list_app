@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from "react";
 
-function Register (props) {
+function Register () {
     const [email,setEmail] =useState('');
     const [pass,setPass] =useState('');
     const [name,setName]  = useState();

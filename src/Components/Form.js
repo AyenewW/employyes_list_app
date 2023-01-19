@@ -30,7 +30,7 @@ const Form = () => {
   }
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Add Employee</h1>
+      <h1 style={{ textAlign: "center" }}>ADD EMPLOYEES</h1>
       <form style={styledForm} onSubmit={handleSubmit}>
         <input
           style={styledInput}
@@ -90,28 +90,30 @@ const Form = () => {
   );
 };
 const styledForm = {
-  display: "flex",
-  flexDirection: "column",
-
-  padding: "3px 2px",
-  margin: "10px 0",
-  marginLeft: "300px",
-  marginRight: "300px",
-  rowGap: "15px",
+  display: 'flex',
+  flexDirection: 'column',
+  padding: '3px 2px',
+  margin: '20px auto',
+  rowGap: '15px',
+  justifyContent: 'center',
+  width: '40%',
+  
 };
 const styledInput = {
-  borderRadius: "9px",
+  borderRadius: '5px',
+  fontSize: '1rem',
+  padding: '0.25rem 1rem',
+   borderRadius: "9px",
   fontSize: "large",
-  padding: "5px",
-  width: "97%",
-  textAlign: "center",
+   padding: "5px",
+   textAlign: "center",
 };
 const styledButton = {
-  borderRadius: "10px",
-  backgroundColor: "rgb(20, 227, 116)",
-  color: "white",
-  padding: "5px",
-  fontSize: "medium",
-};
+  border: 'none',
+  borderRadius: '10px',
+  color: '#fff',
+  padding: '0.5rem 1rem',
+  fontSize: '1.5rem',
+  };
 
 export default Form;

@@ -16,13 +16,8 @@ const EmployeePage = ( props) => {
   );
 };
 const styledEmployeePage ={
-//border: "2px solid #8BC34A",
-width:"50%",
-//backgroundColor:"#B2EBF2",
-fontFamily:"strong",
+ width:"50%",
+ fontFamily:"strong",
 cursor: 'pointer',
-//borderRadius: '5px',
-//padding:'7px',
-
 }
 export default EmployeePage;

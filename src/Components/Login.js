@@ -28,28 +28,27 @@ function Login(props) {
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder='' id='name' name='password' />
                 <button type='submit' >Log In</button>
             </form>
-            {/* <button className='link-btn'  onClick={()=> props.onFormSwitch ('register')} > Don't have an Account ? Register here.</button> */}
+            <button className='link-btn'  onClick={()=> props.onFormSwitch ('register')} > Don't have an Account ? Register here.</button>
         </div>
 
     )
 }
- 
+
 const authformcontainer = {
-   textAlign: 'center',
-   display: 'flex',
+    textAlign: 'center',
+    display: 'flex',
     border: " green solid 2px ",
     borderRadius: "3px",
-     padding: "5px",
+    padding: "5px",
     flexDirection: 'column',
-     
+
 }
- 
 
 const loginform = {
     textAlign: 'center',
     display: 'flex',
     justifyContent: 'center',
-   flexDirection: 'column',
-   padding:'10px',
+    flexDirection: 'column',
+    padding: '10px',
 }
- export default Login
+export default Login

@@ -9,7 +9,10 @@ import NavBar from './Components/NavBar'
 import Register from './Components/Register';
 import Login from './Components/Login';
 function App() {
-
+  // const [currentFORM, SetCurrentForm] = useState('login')
+  //      const toggleForm =(formName)=>{
+  //    SetCurrentForm(formName);
+  //    }
   const [employees, setEmployees] = useState([0])
   const [employeeDetail, setEmployeeDetail] = useState({})
   const [isLoading, setIsLoading] = useState(true)
@@ -33,6 +36,7 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
+      {/* {currentFORM === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>} */}
       <div className="container">
         <Routes>
           <Route path="/employyes_list_app" element={<Home />} />

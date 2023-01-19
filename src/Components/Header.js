@@ -11,11 +11,9 @@ return (
 };
 
 const styledHeader={
-//border: "1px solid #795548",
 textAlign:"center",
 backgroundColor:"#fff",
 width:"50%",
-//width:"95%",
 padding:"0 1px",
 margin:"2px 2px",
 cursor: 'pointer',
