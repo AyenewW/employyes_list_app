@@ -1,26 +1,29 @@
-import Header from "./Header";
-import EmployeeList from "./EmployeeList";
-import SearchBar from "./SearchBar";
+import EmployeeList from './EmployeeList'
+import Header from './Header'
+import SearchBar from './SearchBar'
+
 const HomePage = ({ employees, setEmployeeDetail }) => {
   return (
-    <div style={styledHomePage}>
-      <div style={styedHeaderLeft}>
-        <Header title="Employee Directory" />
+    <div style={StyledHomePage}>
+      <div style={StyledHeaderContent}>
+        <Header title="EMPLOYEES DIRECTORY" />
       </div>
       <SearchBar />
       <EmployeeList
         employees={employees}
-        setEmployeeDetail={setEmployeeDetail} />
+        setEmployeeDetail={setEmployeeDetail}
+      />
     </div>
-  );
-};
-const styledHomePage = {
-  width: "50%",
-  fontFamily: "strong",
+  )
+}
 
-};
-const styedHeaderLeft = {
-  width: "100%",
-  marginLeft: "35%",
-};
-export default HomePage;
+const StyledHomePage = {
+  width: '50%',
+  fontFamily: "strong",
+}
+
+const StyledHeaderContent = {
+  width: '100%',
+  marginLeft: '150px',
+}
+export default HomePage

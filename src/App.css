@@ -1,90 +1,60 @@
-.container
-{
-max-width: 1200px; 
-margin: 6rem auto;
-margin-bottom: 100px;
-padding: 20px;
-/* background-color: #c1ebba; */
-font-family: Georgia;
-font-weight:200;
-font-size: large;
-background: linear-gradient(79deg, #4CAF50, #FFEB3B 48%, #F44336);
+ * {
+   margin: 0;
+ }
 
- 
-}
+ .container {
+   font-family: Georgia;
+   max-width: 900px;
+   margin: 6rem auto;
+   height: 100vh;
+   position: relative;
+   background-image: url(assets/image/download.jpg)
+ }
 
-*{
-margin: 0;
-}
- 
-  .authformcontainer{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border:  green solid 2px ;
-         border-radius: 3px;
-       padding: 5px;
-        margin-top:  2rem;
-  }  
-  .loginform{
-    display: flex;
-     justify-content: center;
-     flex-direction: column;
-     padding: 10px;
-  }
-  .registerform{
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-         border-radius: 3px;
-       /* padding: 3px; */
-        /* margin-top:  2rem; */
-  }
 
-   @media screen and(min-width:600px) {
-   }.authformcontainer{
-    
-        padding: 5rem;
-        border: 1px solid white;
-        border-radius: 10px;
-        margin: 0.5rem;
-        bottom: bdbdbd;
-    }
-   
-    
-    
-    
-    
- 
- 
+ .authformcontainer,
+ .loginform,
+ .registerform {
+   display: flex;
+   flex-direction: column;
+ }
 
-label {
-    margin: 3px;
-    text-align: left;
-    padding: 0.25rem 0;
-}
+ @media screen and (min-width: 600px) {}
 
-input {
-    margin: 10px;
-    padding: 1rem;
-    padding-right: px;
-    border: none;
-    border-radius: 10px;
-}
+ .authformcontainer {
+   padding: 2rem;
+   border: 1px solid white;
+   border-radius: 10px;
+   margin: 4rem;
+   background-image: url(assets/image/bahirdar.jpg)
+ }
 
-button {
-    border: none;
-    /* background-color: rgb(204, 255, 0); */
-    padding: 20px;
-    /* border-radius: 100px; */
-    cursor: pointer;
-    
-}
+ label {
+   text-align: left;
+   padding: 0.25rem 0;
+ }
 
-.link-btn {
-    width: 95%;
-    background: none;
-    color: #df0736;
-    text-decoration: underline;
-}
+ input {
+   margin: 0.5rem 0;
+   padding: 1rem;
+   border: none;
+   border-radius: 10px;
+ }
+
+ button {
+   border: none;
+   background-color: white;
+   padding: 20px;
+   border-radius: 10px;
+   cursor: pointer;
+   color: #0fe013;
+ }
+
+ .link-btn {
+
+   width: 95%;
+   background-color: none;
+   color: #0595f6;
+   text-decoration: underline;
+
+ }

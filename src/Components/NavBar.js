@@ -8,7 +8,7 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 
-function NavBar() {
+function NavBar(props) {
   const navItems = [
     { item: 'Home', to: '/employyes_list_app' },
     { item: 'Add-Employees', to: '/add-employees' },
@@ -16,7 +16,7 @@ function NavBar() {
   ]
   return (
     <div>
-      <AppBar sx={{ height: '8%', backgroundColor: '#2196F3' }}>
+      <AppBar sx={{ height: '8%', backgroundColor: '#009688' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -31,16 +31,22 @@ function NavBar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-           EMPLOYEES
+            EMPLOYEES
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Link to={item.to} style={{ textDecoration: 'none' }}>
-                <Button key={item} sx={{ color: '#fff' }}>
-                  {item.item}
-                </Button>
+            {!props.isLoggedIn ? (
+              <Link to="/employyes_list_app">
+                <Button sx={{ color: '#fff' }}>Home</Button>
               </Link>
-            ))}
+            ) : (
+              navItems.map((item) => (
+                <Link to={item.to} style={{ textDecoration: 'none' }}>
+                  <Button key={item} sx={{ color: '#fff' }}>
+                    {item.item}
+                  </Button>
+                </Link>
+              ))
+            )}
           </Box>
         </Toolbar>
       </AppBar>
@@ -49,8 +55,6 @@ function NavBar() {
 }
 
 export default NavBar
-
-
 
 
 

@@ -1,10 +1,9 @@
-
 import React from 'react'
 import { useState } from 'react'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
-const Login = (props) => {
+export const Login = (props) => {
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
 
@@ -27,13 +26,13 @@ const Login = (props) => {
 
     return (
         <div className="authformcontainer">
-            <h2>Login</h2>
+            <h2 style={{ textAlign: 'Center' }}>Login</h2>
             <form className="loginform" onSubmit={handleSubmit}>
                 <label for="email">Email</label>
                 <input
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
-                    placeholder=" Enter Youremail"
+                    placeholder="Enter Your email"
                     id="email"
                     name="email"
                 />
@@ -45,17 +44,13 @@ const Login = (props) => {
                     id="password"
                     name="password"
                 />
-{/* <button className='link-btn'  onClick={()=> props.onFormSwitch ('register')} > Don't have an Account ? Register here.</button> */}
-
-                <Button  className='link-btn' type="submit" variant="contained" style={{ margin: '2rem' }}>
+                <Button type="submit" variant="contained" style={{ margin: '2rem' }}>
                     Login
                 </Button>
             </form>
             <button className="link-btn" onClick={() => props.toggleForm('register')}>
-                Don't have an account Register here.
+                Don't have an account? Register here.
             </button>
         </div>
     )
-
 }
-export default Login;

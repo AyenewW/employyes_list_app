@@ -1,23 +1,23 @@
-import EmployeeDetail from "./EmployeeDetail";
-import Header from "./Header";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import Header from './Header'
+import EmployeeDetail from './EmployeeDetail'
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
-const EmployeePage = ( props) => {
+const EmployeePage = (props) => {
   return (
-    <div style={styledEmployeePage}>
-      <Header title="Employee" icon={faAngleLeft} />
+    <div style={StyledHomePage}>
+      <Header title="EMPLOYEE" icon={faAngleLeft} />
       <EmployeeDetail
-      employees={props.employees}
-       employeeDetail={props.employeeDetail}
-       isLoading={props.isLoading}
-       isError={props.isError}
-       />
+        employees={props.employees}
+        employeeDetail={props.employeeDetail}
+        isLoading={props.isLoading}
+        isError={props.isError}
+      />
     </div>
-  );
-};
-const styledEmployeePage ={
- width:"50%",
- fontFamily:"strong",
-cursor: 'pointer',
+  )
 }
-export default EmployeePage;
+
+const StyledHomePage = {
+  width: '50%',
+  fontFamily: "strong",
+}
+export default EmployeePage

@@ -1,17 +1,22 @@
-import React from "react";
-import Login from "./Login";
-import {Register} from "./Register";
- import { useState } from "react";
+import React from 'react'
+import { Login } from './Login'
+import { Register } from './Register'
+import { useState } from 'react'
 
 function Home(props) {
-    const [currentFORM, SetCurrentForm] = useState('login')
-      const toggleForm =(formName)=>{
-    SetCurrentForm(formName);
-      }
+    const [currentForm, setCurrentForm] = useState('Login')
+
+    const toggleForm = (formName) => {
+        setCurrentForm(formName)
+    }
+    console.log(currentForm)
     return (
         <div style={{ margin: '0 auto' }}>
-            <h1>Welcome To the EmployeePage</h1>
-            <p> Types of employees:
+            <h1 style={{ textAlign: 'Center', padding: '10px' }}>
+                Welcome to the Employees Home Page
+            </h1>
+            <p style={{ margin: '30px' }}>
+                Types of employees:
                 Full-Time Employees.
                 Part-Time Employees.
                 Seasonal Employees.
@@ -25,29 +30,13 @@ function Home(props) {
                 a former/new/prospective employee
                 a senior/experienced employee
             </p>
-            {currentFORM==='Login'?(
-            <Login setIsloggedIn = {props.setIsloggedIn}
-            toggleForm ={toggleForm} /> 
-            ):(
-            <Register toggleForm ={toggleForm}/>
+            {currentForm === 'Login' ? (
+                <Login setIsLoggedIn={props.setIsLoggedIn} toggleForm={toggleForm} />
+            ) : (
+                <Register toggleForm={toggleForm} />
             )}
-             
-            {/* <div >
-                <div style={styledcontainer} ><Link style={{ textDecoration: "none", color: 'white' }} to='/login'>Login</Link></div>
-                <div style={styledcontainer} ><Link style={{ textDecoration: "none", color: 'white' }} to='/register'>Register</Link></div>
-            </div> */}
         </div>
-    );
-
+    )
 }
-// const styledcontainer = {
-//        backgroundColor: '#2196F3',
-//          width: '100px',
-//     padding: '3px 0',
-//     textAlign: 'center',
-//     borderRadius: '10px',
-//     color: '#fff',
-//     margin: '10px',
-//     cursor: 'pointer',
-// }
-export default Home;
+
+export default Home
