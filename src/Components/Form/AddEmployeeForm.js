@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-
+import {styledForm,styledButton,styledInput} from './styledcomponents'
 const Form = () => {
   const [employeesData, setEmployeesData] = useState({
     name: '',
@@ -93,31 +93,5 @@ const Form = () => {
   )
 }
 
-const styledInput = {
-  borderRadius: '5px',
-  fontSize: '1rem',
-  textAlign: 'center',
-  padding: '0.25rem 1rem',
-}
-
-const styledButton = {
-  border: 'none',
-  borderRadius: '8px',
-  color: '#fff',
-  padding: '0.5rem 1rem',
-  backgroundColor: 'BLUE',
-  fontSize: '1.5rem',
-}
-
-const styledForm = {
-  display: 'flex',
-  flexDirection: 'column',
-  padding: '3px 2px',
-  marginBottom: '5px',
-  margin: '20px auto',
-  rowGap: '15px',
-  justifyContent: 'center',
-  width: '40%',
-}
 
 export default Form

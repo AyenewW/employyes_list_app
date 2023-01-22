@@ -15,7 +15,7 @@ function Home(props) {
             <h1 style={{ textAlign: 'Center', padding: '10px' }}>
                 Welcome to the Employees Home Page
             </h1>
-            <p style={{ margin: '30px' }}>
+            <p style={{ margin: '30px', }}>
                 Types of employees:
                 Full-Time Employees.
                 Part-Time Employees.
