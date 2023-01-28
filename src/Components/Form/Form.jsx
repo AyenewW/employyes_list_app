@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {styledForm,styledButton,styledInput} from './styledcomponents'
+import {styledForm,styledButton,styledInput} from './StyledComponets'
 const Form = () => {
   const [employeesData, setEmployeesData] = useState({
     name: '',

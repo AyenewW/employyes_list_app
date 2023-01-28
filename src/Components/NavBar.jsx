@@ -7,13 +7,16 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
+import { EmployeesContext } from '../EmployeesContext'
+import { useContext } from 'react'
 
-function NavBar(props) {
+function NavBar() {
   const navItems = [
     { item: 'Home', to: '/employyes_list_app' },
     { item: 'Add-Employees', to: '/add-employees' },
     { item: 'EmployeesList', to: '/employees-list' },
   ]
+  const {isLoggedIn} = useContext(EmployeesContext)
   return (
     <div>
       <AppBar sx={{ height: '8%', backgroundColor: '#009688' }}>
@@ -34,7 +37,7 @@ function NavBar(props) {
             EMPLOYEES
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {!props.isLoggedIn ? (
+            {!isLoggedIn ? (
               <Link to="/employyes_list_app">
                 <Button sx={{ color: '#fff' }}>Home</Button>
               </Link>
