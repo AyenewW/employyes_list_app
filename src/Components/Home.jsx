@@ -1,7 +1,6 @@
-import React from 'react'
 import { Login } from './Login'
 import { Register } from './Register'
-import { useState } from 'react'
+import { useState,React } from 'react'
 
 function Home(props) {
     const [currentForm, setCurrentForm] = useState('Login')

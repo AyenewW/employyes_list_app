@@ -1,61 +1,97 @@
- * {
-   margin: 0;
+* {
+  margin: 0;
+}
+
+.App {
+  max-width: 900px;
+  font-family: Georgia;
+  margin: 6rem auto;
+  background-color: #f4f4f4;
+  height: 90vh;
+  position: relative;
+  background-image: url(assets/image/download.jpg)
    
- }
+}
 
- .container {
-   font-family: Georgia;
-   max-width: 900px;
-   margin: 6rem auto;
-   height: 100vh;
-   position: relative;
-   background-image: url(assets/image/download.jpg)
- }
+.authformcontainer,
+.loginform,
+.registerform {
+ 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  
+   }
+
+ 
+  @media screen and (min-width: 600px) {
+
+}.authformcontainer {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  margin: 4rem;
+  color: black;
+  font-size: 12px;
+  background-image: url(assets/image/bahirdar4.jpg)
+}
+
+label {
+  padding: 0;
+  font-size: 25px;
+  /* color: rgb(96, 44, 30); */
+  /* transition: .5s; */
+}
+
+.user-input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 100px;
+
+  box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+    /* transition: .5s; */
+
+}
 
 
- .authformcontainer,
- .loginform,
- .registerform {
-   display: flex;
-   flex-direction: column;
- }
 
- @media screen and (min-width: 600px) {}
+ 
+input {
+  font-size: 20px;
+  transition: 5s;
+  padding: 20px;
+  /* background-color: rgb(24, 31, 231); */
+  text-transform: uppercase;
+  /* transition: .5s; */
+  /* animation-delay: .75s */
+  /* letter-spacing: 1.2px */
+}
 
- .authformcontainer {
-   padding: 2rem;
-   border: 1px solid white;
-   border-radius: 10px;
-   margin: 4rem;
-   background-image: url(assets/image/bahirdar.jpg)
- }
+button {
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+   
+  background: rgb(162, 168, 162);
+  box-shadow: 0 0 1px #03e9f4,
+    0 0 5px #03e9f4,
+    0 0 5px #03e9f4,
+    0 0 10px #03e9f4;
+    
 
- label {
-   text-align: left;
-   padding: 0.25rem 0;
- }
+}
 
- input {
-   margin: 0.5rem 0;
-   padding: 1rem;
-   border: none;
-   border-radius: 10px;
- }
+.link-btn {
+  background-color:#448AFF;
+  color:white
+  
 
- button {
-   border: none;
-   background-color: white;
-   padding: 20px;
-   border-radius: 10px;
-   cursor: pointer;
-   color: #0fe013;
- }
-
- .link-btn {
-
-   width: 95%;
-   background-color: none;
-   color: #0531f6;
-   text-decoration: underline;
-
- }
+}

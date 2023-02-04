@@ -1,15 +1,22 @@
-import React from 'react'
-import { useState } from 'react'
-import {styledForm,styledButton,styledInput} from './StyledComponets'
+import { useState ,React} from 'react'
+import{StyledForm,StyledInput,StyledButton} from './StyledComponets'
+import styled from 'styled-components'
+
+const StyledInputs = styled.input`
+  border-color: ${(props) => props.color || 'blue'};
+  // :hover {
+  //   background: #9E9E9E;
+  // }
+`
 const Form = () => {
   const [employeesData, setEmployeesData] = useState({
     name: '',
-    image: '',
     occupation: '',
     callOffice: '',
     callMobile: '',
     sms: '',
     email: '',
+    image: '',
   })
 
   function handleChange(event) {
@@ -34,58 +41,62 @@ const Form = () => {
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>ADD EMPLOYEE</h1>
-      <form style={styledForm} onSubmit={handleSubmit}>
-        <input
-          style={styledInput}
+      <form style={StyledForm} onSubmit={handleSubmit}>
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Name"
           name="name"
           onChange={handleChange}
+          color="#76ff03"
         />
-
-        <input
-          style={styledInput}
+        
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Occupation"
           name="occupation"
           onChange={handleChange}
+           color="red"
         />
-        <input
-          style={styledInput}
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Call Office"
           name="callOffice"
           onChange={handleChange}
+          color='#FFEB3B'
         />
-        <input
-          style={styledInput}
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Call Mobile"
           name="callMobile"
           onChange={handleChange}
         />
-        <input
-          style={styledInput}
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="SMS"
           name="sms"
           onChange={handleChange}
+          color='#FF9800'
         />
-        <input
-          style={styledInput}
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Email"
           name="email"
           onChange={handleChange}
         />
-        <input
-          style={styledInput}
+        <StyledInputs
+          style={StyledInput}
           type="text"
           placeholder="Image url"
           name="image"
           onChange={handleChange}
         />
-        <button style={styledButton} type="button">
+        <button style={StyledButton} type="button">
           Submit
         </button>
       </form>
@@ -93,5 +104,5 @@ const Form = () => {
   )
 }
 
-
 export default Form
+ 

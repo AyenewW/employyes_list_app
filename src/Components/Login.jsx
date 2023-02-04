@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react'
+import { useState,React } from 'react'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
@@ -30,6 +29,7 @@ export const Login = (props) => {
             <form className="loginform" onSubmit={handleSubmit}>
                 <label for="email">Email</label>
                 <input
+                 className="user-input"
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     placeholder="Enter Your email"
@@ -38,13 +38,14 @@ export const Login = (props) => {
                 />
                 <label for="password">Password</label>
                 <input
+                 className="user-input"
                     onChange={(e) => setPass(e.target.value)}
                     type="password"
-                    placeholder="Enter Your password"
+                    placeholder="Enter your password"
                     id="password"
                     name="password"
                 />
-                <Button type="submit" variant="contained" style={{ margin: '2rem' }}>
+                <Button type="submit" variant="" style={{ margin: '2rem',background:'#B9F6CA'}}>
                     Login
                 </Button>
             </form>

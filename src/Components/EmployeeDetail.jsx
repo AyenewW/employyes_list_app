@@ -28,11 +28,31 @@ const EmployeeDetail = () => {
     return (
       <Stack spacing={1}>
         <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-        <Skeleton variant="circular" width={80} height={80} />
-        <Skeleton variant="rectangular" width={400} height={70} />
-        <Skeleton variant="rectangular" width={400} height={70} />
-        <Skeleton variant="rectangular" width={400} height={70} />
-        <Skeleton variant="rectangular" width={400} height={70} />
+         <Skeleton variant="circular" width={80} height={80} />
+        <Skeleton
+          variant="rectangular"
+          width={400}
+          height={70}
+          animation="wave"
+        />
+        <Skeleton
+          variant="rectangular"
+          width={400}
+          height={70}
+          animation="wave"
+        />
+        <Skeleton
+          variant="rectangular"
+          width={400}
+          height={70}
+          animation="wave"
+        />
+        <Skeleton
+          variant="rectangular"
+          width={400}
+          height={70}
+          animation="wave"
+        />
       </Stack>
     )
   }

@@ -1,35 +1,75 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import  styled  from 'styled-components';
-import React from "react"; 
+import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { useState, useContext } from 'react'
+import { EmployeesContext } from '../EmployeesContext'
 
 const StyledSearch = styled.div`
-display:flex;
-align-items:center;
+  display: flex;
+  align-items: center;
+`
+
+const StyledInput = styled.input`
+  border-color: ${(props) => props.color || 'blue'};
+  cursor: pointer;
+  text-align: center;
+  width: 95%;
+  border-radius: 5px;
+  padding: 7px 10px;
+  margin: 2px 9px;
+  height:30px;
+  font-size:15px;
+  :hover {
+  background: #C5CAE9;
+    
+  }
 `
 const SearchBar = () => {
+  const [searchValue, setSearchValue] = useState('')
+  const { employees, setEmployeeDetail, setEmployees } = useContext(
+    EmployeesContext,
+    )
+
+  const handleChange = (event) => {
+    setSearchValue(event.target.value)
+  }
+  
+  const handleSearch = () => {
+    const searchedValue = employees.filter((item) => {
+      const searchName = item.name.toLowerCase()
+      const searchLowerValue = searchValue.toLowerCase()
+      return searchLowerValue === searchName
+    })
+    setEmployees(searchedValue)
+    setEmployeeDetail(searchedValue[0])
+  }
   return (
     <StyledSearch>
-      <input
-        style={StyledSearchBar}
+      <StyledInput
+         
         type="text"
-        placeholder="Search by Name"
-       />
-      <FontAwesomeIcon  icon={ faSearch} 
-     />
+        placeholder="Search by name"
+        onChange={handleChange}
+      />
+      <FontAwesomeIcon
+        style={StyledSearchIcon}
+        icon={faSearch}
+        onClick={handleSearch}
+      />
     </StyledSearch>
-  );
-};
+  )
+}
 
-const StyledSearchBar = {
 
-  width: '97%',
-  borderRadius: '5px',
-  border: '1px solid #333',
-  textAlign: 'center',
-  padding: '7px 2px',
-  margin: '2px 5px',
+
+const StyledSearchIcon = {
   cursor: 'pointer',
+  backgroundColor: '#03e9f4',
+  padding: '9px 10px',
+  borderRadius: '50%',
+  position: 'absolute',
+  right: '53%',
+                 
 }
 
 export default SearchBar
