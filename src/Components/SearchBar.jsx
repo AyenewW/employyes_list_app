@@ -13,10 +13,11 @@ const StyledInput = styled.input`
   border-color: ${(props) => props.color || 'blue'};
   cursor: pointer;
   text-align: center;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
   padding: 7px 10px;
   margin: 2px 9px;
+  margin-right:-40px;
   height:30px;
   font-size:15px;
   :hover {
@@ -65,9 +66,11 @@ const SearchBar = () => {
 const StyledSearchIcon = {
   cursor: 'pointer',
   backgroundColor: '#03e9f4',
-  padding: '9px 10px',
+  width:'15px',
+  height:'15px',
+  padding:'9px 10px',
   borderRadius: '50%',
-  position: 'absolute',
+  
   right: '53%',
                  
 }
