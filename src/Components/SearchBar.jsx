@@ -53,7 +53,7 @@ const SearchBar = () => {
         onChange={handleChange}
       />
       <FontAwesomeIcon
-        style={StyledSearchIcon}
+        
         icon={faSearch}
         onClick={handleSearch}
       />
@@ -63,16 +63,6 @@ const SearchBar = () => {
 
 
 
-const StyledSearchIcon = {
-  cursor: 'pointer',
-  backgroundColor: '#03e9f4',
-  width:'15px',
-  height:'15px',
-  padding:'9px 10px',
-  borderRadius: '50%',
-  
-  right: '53%',
-                 
-}
+ 
 
 export default SearchBar
